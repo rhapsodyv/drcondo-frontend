@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useState, type CSSProperties, type ReactNode } from 'react'
 
 import { applyTheme, useThemeStore, type ThemeName } from '@/store/useThemeStore'
 
@@ -91,6 +91,40 @@ function Alert({ status, title, children }: { status: StatusKind; title: string;
     </div>
   )
 }
+
+function SolidColorButton({ label, solid, solidHover, fg }: {
+  label: string; solid: string; solidHover: string; fg: string
+}) {
+  return (
+    <Button
+      style={{ '--c-solid': solid, '--c-hover': solidHover, '--c-fg': fg } as CSSProperties}
+      className="[background-color:var(--c-solid)] [color:var(--c-fg)] data-[hovered]:[background-color:var(--c-hover)] data-[pressed]:[background-color:var(--c-hover)] border-0"
+    >
+      {label}
+    </Button>
+  )
+}
+
+function SoftColorButton({ label, bg, bgHover, border, text }: {
+  label: string; bg: string; bgHover: string; border: string; text: string
+}) {
+  return (
+    <Button
+      style={{ '--c-bg': bg, '--c-hover': bgHover, '--c-border': border, '--c-text': text } as CSSProperties}
+      className="[background-color:var(--c-bg)] [color:var(--c-text)] [border:1px_solid_var(--c-border)] data-[hovered]:[background-color:var(--c-hover)] data-[pressed]:[background-color:var(--c-hover)]"
+    >
+      {label}
+    </Button>
+  )
+}
+
+const BUTTON_COLORS = [
+  { label: 'Brand',   solid: 'var(--brand-solid)',   solidHover: 'var(--brand-solid-hover)',   fg: 'var(--brand-foreground)',   bg: 'var(--brand-a3)',    bgHover: 'var(--brand-a4)',       border: 'var(--brand-a7)',       text: 'var(--brand-a11)' },
+  { label: 'Success', solid: 'var(--success-solid)',  solidHover: 'var(--success-solid-hover)', fg: 'var(--success-foreground)', bg: 'var(--success-bg)',  bgHover: 'var(--success-bg-hover)', border: 'var(--success-border)', text: 'var(--success-text)' },
+  { label: 'Warning', solid: 'var(--warning-solid)',  solidHover: 'var(--warning-solid-hover)', fg: 'var(--warning-foreground)', bg: 'var(--warning-bg)',  bgHover: 'var(--warning-bg-hover)', border: 'var(--warning-border)', text: 'var(--warning-text)' },
+  { label: 'Error',   solid: 'var(--error-solid)',    solidHover: 'var(--error-solid-hover)',   fg: 'var(--error-foreground)',   bg: 'var(--error-bg)',    bgHover: 'var(--error-bg-hover)',   border: 'var(--error-border)',   text: 'var(--error-text)' },
+  { label: 'Info',    solid: 'var(--info-solid)',     solidHover: 'var(--info-solid-hover)',    fg: 'var(--info-foreground)',    bg: 'var(--info-bg)',     bgHover: 'var(--info-bg-hover)',    border: 'var(--info-border)',    text: 'var(--info-text)' },
+]
 
 /* ── seletor de tema ──────────────────────────────────────────────── */
 
@@ -305,12 +339,18 @@ export default function HomePage() {
                 <Button variant="destructive" isDisabled>Destructive</Button>
               </div>
             </SubSection>
-            <SubSection label="Soft — brand-a3/a7/a11, muda com o tema">
+            <SubSection label="Cores — sólido (muda com o tema na Brand)">
               <div className="flex flex-wrap gap-3">
-                <Button variant="soft">Soft primário</Button>
-                <Button variant="soft" size="sm">Soft sm</Button>
-                <Button variant="soft" size="lg">Soft lg</Button>
-                <Button variant="soft" isDisabled>Soft disabled</Button>
+                {BUTTON_COLORS.map((c) => (
+                  <SolidColorButton key={c.label} {...c} />
+                ))}
+              </div>
+            </SubSection>
+            <SubSection label="Cores — soft / tintado">
+              <div className="flex flex-wrap gap-3">
+                {BUTTON_COLORS.map((c) => (
+                  <SoftColorButton key={c.label} {...c} />
+                ))}
               </div>
             </SubSection>
           </CardContent>
