@@ -1,13 +1,12 @@
-import {createBrowserRouter, Outlet} from 'react-router';
+import { createBrowserRouter, Outlet } from 'react-router';
+import LoginPage from '@/pages/LoginPage';
+import AdminPage from '@/pages/AdminPage';
 import HomePage from '@/pages/HomePage';
-import AdminPage from "@/pages/AdminPage.tsx";
+import { ProtectedRoute } from '@/components/layout/ProtectedRoute';
 
 export function AppLayout() {
-  return (
-    <Outlet />
-  );
+  return <Outlet />;
 }
-
 
 export const router = createBrowserRouter([
   {
@@ -15,12 +14,21 @@ export const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       {
-        path: '/login',
+        path: 'login',
+        element: <LoginPage />,
+      },
+      {
+        path: 'design-system',
         element: <HomePage />,
       },
       {
-        index: true,
-        element: <AdminPage />,
+        element: <ProtectedRoute />,
+        children: [
+          {
+            index: true,
+            element: <AdminPage />,
+          },
+        ],
       },
     ],
   },

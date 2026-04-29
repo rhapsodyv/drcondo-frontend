@@ -1,0 +1,195 @@
+/* ================================================================
+   TEMA OCEAN — primitivos da marca + overrides semânticos
+   Primário: azure (#0065a0) · Secundário: tangerine (#f79532)
+   Aplique a classe .theme-ocean no elemento <html>
+   Neutro frio (slate) vem de primitives.css — compartilhado.
+   ================================================================ */
+
+/* ── Azure — primitivos da marca primária deste tema ─────────── */
+:root {
+  --azure-1:  #f3f8fc;
+  --azure-2:  #e5f1f9;
+  --azure-3:  #cce4f6;
+  --azure-4:  #b1d6f2;
+  --azure-5:  #93c5ec;
+  --azure-6:  #6eb2e4;
+  --azure-7:  #479dd8;
+  --azure-8:  #2287c7;
+  --azure-9:  #0065a0;
+  --azure-10: #005890;
+  --azure-11: #004578;
+  --azure-12: #001c30;
+  --azure-a1:  #0065a004;
+  --azure-a2:  #0065a00c;
+  --azure-a3:  #0065a01a;
+  --azure-a4:  #0065a02c;
+  --azure-a5:  #0065a040;
+  --azure-a6:  #0065a058;
+  --azure-a7:  #0065a074;
+  --azure-a8:  #0065a09e;
+  --azure-a9:  #0065a0;
+  --azure-a10: #005890fa;
+  --azure-a11: #004578ee;
+  --azure-a12: #001c30e8;
+  --azure-surface: #f3f8fccc;
+}
+.dark {
+  --azure-1:  #0b151f;
+  --azure-2:  #0e1e2d;
+  --azure-3:  #0f2840;
+  --azure-4:  #103453;
+  --azure-5:  #114066;
+  --azure-6:  #134d7a;
+  --azure-7:  #185d93;
+  --azure-8:  #1e70ad;
+  --azure-9:  #0065a0;
+  --azure-10: #267fc0;
+  --azure-11: #62b0e2;
+  --azure-12: #c2e2f7;
+  --azure-a1:  #003c6211;
+  --azure-a2:  #005a9018;
+  --azure-a3:  #1e70ad33;
+  --azure-a4:  #1e70ad4d;
+  --azure-a5:  #267fc062;
+  --azure-a6:  #267fc078;
+  --azure-a7:  #62b0e294;
+  --azure-a8:  #62b0e2b5;
+  --azure-a9:  #0065a0;
+  --azure-a10: #267fc0;
+  --azure-a11: #62b0e2;
+  --azure-a12: #c2e2f7;
+  --azure-surface: #0f284080;
+}
+
+/* ── Tangerine — primitivos da marca secundária deste tema ───── */
+:root {
+  --tangerine-1:  #fffcf6;
+  --tangerine-2:  #fff8ea;
+  --tangerine-3:  #ffedcc;
+  --tangerine-4:  #ffdfaa;
+  --tangerine-5:  #ffcf87;
+  --tangerine-6:  #ffba5f;
+  --tangerine-7:  #f9a83d;
+  --tangerine-8:  #f29923;
+  --tangerine-9:  #f79532;
+  --tangerine-10: #dd7e14;
+  --tangerine-11: #b45c09;
+  --tangerine-12: #4d2200;
+  --tangerine-a1:  #c0600004;
+  --tangerine-a2:  #d0700011;
+  --tangerine-a3:  #e0780026;
+  --tangerine-a4:  #e080003d;
+  --tangerine-a5:  #d8780058;
+  --tangerine-a6:  #cc6e0075;
+  --tangerine-a7:  #c0640091;
+  --tangerine-a8:  #b85c00b2;
+  --tangerine-a9:  #a05000c2;
+  --tangerine-a10: #8c4500cc;
+  --tangerine-a11: #5e2d00c8;
+  --tangerine-a12: #280e00dc;
+  --tangerine-surface: #fffcf6cc;
+}
+.dark {
+  --tangerine-1:  #1b1200;
+  --tangerine-2:  #231800;
+  --tangerine-3:  #302100;
+  --tangerine-4:  #3d2b00;
+  --tangerine-5:  #4d3600;
+  --tangerine-6:  #5e4200;
+  --tangerine-7:  #754f0a;
+  --tangerine-8:  #926019;
+  --tangerine-9:  #f79532;
+  --tangerine-10: #ffaa42;
+  --tangerine-11: #ffc26a;
+  --tangerine-12: #ffe0ac;
+  --tangerine-a1:  #f7953206;
+  --tangerine-a2:  #ffa03c0d;
+  --tangerine-a3:  #ffa04022;
+  --tangerine-a4:  #ffa04035;
+  --tangerine-a5:  #ffa84545;
+  --tangerine-a6:  #ffb05058;
+  --tangerine-a7:  #ffb5556c;
+  --tangerine-a8:  #ffba6090;
+  --tangerine-a9:  #f79532;
+  --tangerine-a10: #ffaa42;
+  --tangerine-a11: #ffc26a;
+  --tangerine-a12: #ffe0ac;
+  --tangerine-surface: #30210080;
+}
+
+/* ── Overrides semânticos do tema ocean ──────────────────────── */
+.theme-ocean {
+  /* ── Superfícies (Slate — neutro frio) ───────────────────────── */
+  --bg-app:            var(--slate-1);
+  --bg-subtle:         var(--slate-2);
+  --bg-ui:             var(--slate-3);
+  --bg-ui-hover:       var(--slate-4);
+  --bg-ui-active:      var(--slate-5);
+  --bg-surface:        #ffffff;
+  --bg-surface-raised: #ffffff;
+
+  /* ── Texto ───────────────────────────────────────────────────── */
+  --text-1:          var(--slate-12);
+  --text-2:          var(--slate-11);
+  --text-3:          var(--slate-9);
+  --text-disabled:   var(--slate-8);
+  --text-link:       var(--azure-11);
+  --text-link-hover: var(--azure-10);
+
+  /* ── Bordas ──────────────────────────────────────────────────── */
+  --border-subtle: var(--slate-5);
+  --border:        var(--slate-7);
+  --border-strong: var(--slate-9);
+  --border-focus:  var(--azure-8);
+
+  /* ── Marca / Brand (azure — azul) ────────────────────────────── */
+  --brand-subtle:       var(--azure-2);
+  --brand-subtle-hover: var(--azure-3);
+  --brand-ui:           var(--azure-4);
+  --brand-border:       var(--azure-7);
+  --brand-border-hover: var(--azure-8);
+  --brand-solid:        var(--azure-9);
+  --brand-solid-hover:  var(--azure-10);
+  --brand-text:         var(--azure-11);
+  --brand-text-strong:  var(--azure-12);
+  --brand-foreground:   #ffffff;
+
+  /* ── Brand alpha (variantes soft/ghost) ─────────────────────── */
+  --brand-a3:  var(--azure-a3);
+  --brand-a4:  var(--azure-a4);
+  --brand-a5:  var(--azure-a5);
+  --brand-a7:  var(--azure-a7);
+  --brand-a11: var(--azure-a11);
+
+  /* ── Aliases JollyUI / shadcn ────────────────────────────────── */
+  --background:           var(--bg-app);
+  --foreground:           var(--text-1);
+  --card:                 var(--bg-surface);
+  --card-foreground:      var(--text-1);
+  --popover:              var(--bg-surface-raised);
+  --popover-foreground:   var(--text-1);
+  --primary:              var(--brand-solid);
+  --primary-foreground:   var(--brand-foreground);
+  --secondary:            var(--tangerine-9);
+  --secondary-foreground: #ffffff;
+  --muted:                var(--bg-subtle);
+  --muted-foreground:     var(--text-2);
+  --accent:               var(--tangerine-2);
+  --accent-foreground:    var(--tangerine-11);
+  --input:                var(--bg-ui);
+  --ring:                 var(--border-focus);
+}
+
+/* Dark mode do tema ocean */
+.dark.theme-ocean {
+  --bg-surface:        var(--slate-2);
+  --bg-surface-raised: var(--slate-3);
+  --secondary:         var(--tangerine-9);
+  --secondary-foreground: #ffffff;
+
+  --border-subtle: var(--slate-5);
+  --border:        var(--slate-7);
+  --border-strong: var(--slate-9);
+  --border-focus:  var(--azure-7);
+  --input:         var(--slate-6);
+}

@@ -1,0 +1,403 @@
+/* ================================================================
+   PRIMITIVES — tokens verdadeiramente universais
+   Cores de status + neutro frio compartilhado + alpha universais
+   + todos os tokens não-coloridos (espaço, raio, sombra, tipografia)
+
+   NÃO coloque cores de marca aqui — cada tema define as suas
+   em seu próprio arquivo (theme.css, theme-violet.css, etc.)
+   ================================================================ */
+
+:root {
+  /* ── Red (erro / destrutivo) ─────────────────────────────────── */
+  --red-1:  #fff8f7;
+  --red-2:  #fff0ee;
+  --red-3:  #ffe6e2;
+  --red-4:  #fdd8d3;
+  --red-5:  #f9c6bf;
+  --red-6:  #f3b0a7;
+  --red-7:  #ea9590;
+  --red-8:  #e07369;
+  --red-9:  #e5484d;
+  --red-10: #db3e35;
+  --red-11: #ca2a2a;
+  --red-12: #3b1219;
+  --red-a1:  #ff000003;
+  --red-a2:  #ff000008;
+  --red-a3:  #f3000d14;
+  --red-a4:  #ff000824;
+  --red-a5:  #ff000632;
+  --red-a6:  #f8000442;
+  --red-a7:  #df000356;
+  --red-a8:  #d2000571;
+  --red-a9:  #db0007b7;
+  --red-a10: #d10005c1;
+  --red-a11: #c40006d3;
+  --red-a12: #55000de8;
+  --red-surface: #fff8f7cc;
+
+  /* ── Green (sucesso) ─────────────────────────────────────────── */
+  --green-1:  #fbfefb;
+  --green-2:  #f3fcf3;
+  --green-3:  #daf5dc;
+  --green-4:  #c9f0cc;
+  --green-5:  #b2e6b6;
+  --green-6:  #99d89e;
+  --green-7:  #7cc984;
+  --green-8:  #65ba6d;
+  --green-9:  #46a758;
+  --green-10: #3d9a50;
+  --green-11: #297c3b;
+  --green-12: #1b311e;
+  --green-a1:  #00c04004;
+  --green-a2:  #00a32f0b;
+  --green-a3:  #00a43319;
+  --green-a4:  #00a83829;
+  --green-a5:  #019c393b;
+  --green-a6:  #00963c52;
+  --green-a7:  #00914071;
+  --green-a8:  #00924ba4;
+  --green-a9:  #008f4acf;
+  --green-a10: #008647d4;
+  --green-a11: #00713fde;
+  --green-a12: #002616e6;
+  --green-surface: #f3fcf3cc;
+
+  /* ── Amber (aviso) ───────────────────────────────────────────── */
+  --amber-1:  #fefdfb;
+  --amber-2:  #fff9ed;
+  --amber-3:  #fff4c2;
+  --amber-4:  #ffee9c;
+  --amber-5:  #ffe770;
+  --amber-6:  #f5d749;
+  --amber-7:  #efcc4c;
+  --amber-8:  #e9b64a;
+  --amber-9:  #ffc53d;
+  --amber-10: #f5ae00;
+  --amber-11: #ab6400;
+  --amber-12: #4f2c00;
+  --amber-a1:  #c0800004;
+  --amber-a2:  #f4d10016;
+  --amber-a3:  #ffde003d;
+  --amber-a4:  #ffd40063;
+  --amber-a5:  #f8cf0088;
+  --amber-a6:  #eab5008c;
+  --amber-a7:  #dc9b009d;
+  --amber-a8:  #da8a00c9;
+  --amber-a9:  #ffb300c2;
+  --amber-a10: #ffb300e7;
+  --amber-a11: #ab6400;
+  --amber-a12: #341500dd;
+  --amber-surface: #fff9edcc;
+
+  /* ── Blue (informação) ───────────────────────────────────────── */
+  --blue-1:  #fbfdff;
+  --blue-2:  #f4faff;
+  --blue-3:  #e6f4fe;
+  --blue-4:  #d5efff;
+  --blue-5:  #c2e5ff;
+  --blue-6:  #acd8fc;
+  --blue-7:  #8ec8f6;
+  --blue-8:  #5eb1ef;
+  --blue-9:  #0090ff;
+  --blue-10: #0588f0;
+  --blue-11: #0d74ce;
+  --blue-12: #113264;
+  --blue-a1:  #0080ff04;
+  --blue-a2:  #008cff0b;
+  --blue-a3:  #008ff519;
+  --blue-a4:  #009eff2a;
+  --blue-a5:  #0093ff3d;
+  --blue-a6:  #0088f653;
+  --blue-a7:  #0083eb71;
+  --blue-a8:  #0084e6a1;
+  --blue-a9:  #0090ff;
+  --blue-a10: #0086f0fa;
+  --blue-a11: #006dcbf2;
+  --blue-a12: #002359ee;
+  --blue-surface: #f4faff;
+
+  /* ── Slate (neutro frio — compartilhado entre tema violet e ocean) */
+  --slate-1:  #fbfcfd;
+  --slate-2:  #f8f9fa;
+  --slate-3:  #f1f3f5;
+  --slate-4:  #eceef0;
+  --slate-5:  #e6e8eb;
+  --slate-6:  #dde1e6;
+  --slate-7:  #d3d8de;
+  --slate-8:  #c1c8cd;
+  --slate-9:  #889096;
+  --slate-10: #7e868c;
+  --slate-11: #687076;
+  --slate-12: #11181c;
+  --slate-a1:  #00005503;
+  --slate-a2:  #00005506;
+  --slate-a3:  #0000330f;
+  --slate-a4:  #00002d17;
+  --slate-a5:  #0009321f;
+  --slate-a6:  #00002f26;
+  --slate-a7:  #00062e32;
+  --slate-a8:  #00083046;
+  --slate-a9:  #00051d74;
+  --slate-a10: #00071b7f;
+  --slate-a11: #0007149f;
+  --slate-a12: #000509e3;
+  --slate-surface: #ffffffcc;
+
+  /* ── Preto / Branco alpha (overlays, sombras, tints universais) ─ */
+  --black-a1:  rgba(0, 0, 0, 0.05);
+  --black-a2:  rgba(0, 0, 0, 0.10);
+  --black-a3:  rgba(0, 0, 0, 0.15);
+  --black-a4:  rgba(0, 0, 0, 0.20);
+  --black-a5:  rgba(0, 0, 0, 0.30);
+  --black-a6:  rgba(0, 0, 0, 0.40);
+  --black-a7:  rgba(0, 0, 0, 0.50);
+  --black-a8:  rgba(0, 0, 0, 0.60);
+  --black-a9:  rgba(0, 0, 0, 0.70);
+  --black-a10: rgba(0, 0, 0, 0.80);
+  --black-a11: rgba(0, 0, 0, 0.90);
+  --black-a12: rgba(0, 0, 0, 0.95);
+  --white-a1:  rgba(255, 255, 255, 0.05);
+  --white-a2:  rgba(255, 255, 255, 0.10);
+  --white-a3:  rgba(255, 255, 255, 0.15);
+  --white-a4:  rgba(255, 255, 255, 0.20);
+  --white-a5:  rgba(255, 255, 255, 0.30);
+  --white-a6:  rgba(255, 255, 255, 0.40);
+  --white-a7:  rgba(255, 255, 255, 0.50);
+  --white-a8:  rgba(255, 255, 255, 0.60);
+  --white-a9:  rgba(255, 255, 255, 0.70);
+  --white-a10: rgba(255, 255, 255, 0.80);
+  --white-a11: rgba(255, 255, 255, 0.90);
+  --white-a12: rgba(255, 255, 255, 0.95);
+
+  /* ── Espaço (base 4px) ───────────────────────────────────────── */
+  --space-px: 1px;
+  --space-0:  0;
+  --space-1:  0.25rem;   /*   4px */
+  --space-2:  0.5rem;    /*   8px */
+  --space-3:  0.75rem;   /*  12px */
+  --space-4:  1rem;      /*  16px */
+  --space-5:  1.25rem;   /*  20px */
+  --space-6:  1.5rem;    /*  24px */
+  --space-7:  1.75rem;   /*  28px */
+  --space-8:  2rem;      /*  32px */
+  --space-10: 2.5rem;    /*  40px */
+  --space-12: 3rem;      /*  48px */
+  --space-14: 3.5rem;    /*  56px */
+  --space-16: 4rem;      /*  64px */
+  --space-20: 5rem;      /*  80px */
+  --space-24: 6rem;      /*  96px */
+  --space-32: 8rem;      /* 128px */
+  --space-40: 10rem;     /* 160px */
+  --space-48: 12rem;     /* 192px */
+  --space-64: 16rem;     /* 256px */
+
+  /* ── Raio de borda ───────────────────────────────────────────── */
+  --radius-none: 0;
+  --radius-sm:   0.25rem;   /*  4px */
+  --radius-md:   0.375rem;  /*  6px */
+  --radius-lg:   0.5rem;    /*  8px */
+  --radius-xl:   0.75rem;   /* 12px */
+  --radius-2xl:  1rem;      /* 16px */
+  --radius-3xl:  1.5rem;    /* 24px */
+  --radius-full: 9999px;
+
+  /* ── Sombras ─────────────────────────────────────────────────── */
+  --shadow-xs:    0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm:    0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md:    0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg:    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl:    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl:   0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+  /* ── Tipografia — tamanhos ───────────────────────────────────── */
+  --font-size-xs:   0.75rem;   /*  12px */
+  --font-size-sm:   0.875rem;  /*  14px */
+  --font-size-base: 1rem;      /*  16px */
+  --font-size-lg:   1.125rem;  /*  18px */
+  --font-size-xl:   1.25rem;   /*  20px */
+  --font-size-2xl:  1.5rem;    /*  24px */
+  --font-size-3xl:  1.875rem;  /*  30px */
+  --font-size-4xl:  2.25rem;   /*  36px */
+  --font-size-5xl:  3rem;      /*  48px */
+  --font-size-6xl:  3.75rem;   /*  60px */
+
+  /* ── Tipografia — pesos ──────────────────────────────────────── */
+  --font-weight-light:     300;
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+  --font-weight-extrabold: 800;
+
+  /* ── Tipografia — altura de linha ────────────────────────────── */
+  --line-height-none:    1;
+  --line-height-tight:   1.25;
+  --line-height-snug:    1.375;
+  --line-height-normal:  1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose:   2;
+
+  /* ── Tipografia — espaçamento de letras ──────────────────────── */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight:   -0.025em;
+  --letter-spacing-normal:   0em;
+  --letter-spacing-wide:     0.025em;
+  --letter-spacing-wider:    0.05em;
+  --letter-spacing-widest:   0.1em;
+
+  /* ── Curvas de animação ───────────────────────────────────────── */
+  --ease-default: cubic-bezier(0.25, 0, 0.4, 1);
+  --ease-in:      cubic-bezier(0.4, 0, 1, 1);
+  --ease-out:     cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out:  cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-bounce:  cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* ── Durações ────────────────────────────────────────────────── */
+  --duration-instant: 50ms;
+  --duration-fast:    100ms;
+  --duration-normal:  200ms;
+  --duration-slow:    300ms;
+  --duration-slower:  500ms;
+  --duration-lazy:    700ms;
+}
+
+/* Dark mode — cores de status e slate invertidas */
+.dark {
+  /* ── Red dark ────────────────────────────────────────────────── */
+  --red-1:  #191111;
+  --red-2:  #201314;
+  --red-3:  #3b1219;
+  --red-4:  #500f1c;
+  --red-5:  #611623;
+  --red-6:  #72232d;
+  --red-7:  #8c333a;
+  --red-8:  #b54548;
+  --red-9:  #e5484d;
+  --red-10: #ec5d5e;
+  --red-11: #ff9592;
+  --red-12: #ffd1d9;
+  --red-a1:  #f4121209;
+  --red-a2:  #f22f3e11;
+  --red-a3:  #ff173f2d;
+  --red-a4:  #fe0a3b44;
+  --red-a5:  #ff204756;
+  --red-a6:  #ff3e5668;
+  --red-a7:  #ff536184;
+  --red-a8:  #ff5d61b0;
+  --red-a9:  #fe4e54e4;
+  --red-a10: #ff6465eb;
+  --red-a11: #ff9592;
+  --red-a12: #ffd1d9;
+  --red-surface: #3b121980;
+
+  /* ── Green dark ──────────────────────────────────────────────── */
+  --green-1:  #0e1511;
+  --green-2:  #141a15;
+  --green-3:  #1b2a1e;
+  --green-4:  #1d3a22;
+  --green-5:  #25472a;
+  --green-6:  #2d5736;
+  --green-7:  #366740;
+  --green-8:  #3e7949;
+  --green-9:  #46a758;
+  --green-10: #53b365;
+  --green-11: #71d083;
+  --green-12: #c2f0c2;
+  --green-a1:  #00de4505;
+  --green-a2:  #29f99d0b;
+  --green-a3:  #22ff991e;
+  --green-a4:  #11ff992d;
+  --green-a5:  #2bffa23c;
+  --green-a6:  #44ffaa4b;
+  --green-a7:  #50fdac5e;
+  --green-a8:  #54ffad73;
+  --green-a9:  #44ffa49e;
+  --green-a10: #43fea4ab;
+  --green-a11: #46fea5d4;
+  --green-a12: #bbffd7f0;
+  --green-surface: #1b2a1e80;
+
+  /* ── Amber dark ──────────────────────────────────────────────── */
+  --amber-1:  #16120a;
+  --amber-2:  #1d1400;
+  --amber-3:  #302008;
+  --amber-4:  #3f2700;
+  --amber-5:  #4d3000;
+  --amber-6:  #5c3d05;
+  --amber-7:  #714f19;
+  --amber-8:  #8f6424;
+  --amber-9:  #ffc53d;
+  --amber-10: #ffba18;
+  --amber-11: #ffd270;
+  --amber-12: #ffe7b3;
+  --amber-a1:  #e63c0006;
+  --amber-a2:  #fd9b000d;
+  --amber-a3:  #fa820022;
+  --amber-a4:  #fc820032;
+  --amber-a5:  #fd8b0041;
+  --amber-a6:  #fd9b0051;
+  --amber-a7:  #ffab2567;
+  --amber-a8:  #ffae3587;
+  --amber-a9:  #ffc53d;
+  --amber-a10: #ffd60a;
+  --amber-a11: #ffca16;
+  --amber-a12: #ffe7b3;
+  --amber-surface: #30200880;
+
+  /* ── Blue dark ───────────────────────────────────────────────── */
+  --blue-1:  #0d1520;
+  --blue-2:  #111927;
+  --blue-3:  #0d2847;
+  --blue-4:  #003362;
+  --blue-5:  #004074;
+  --blue-6:  #104d87;
+  --blue-7:  #205d9e;
+  --blue-8:  #2870bd;
+  --blue-9:  #0090ff;
+  --blue-10: #3b9ede;
+  --blue-11: #70b8ff;
+  --blue-12: #c2e6ff;
+  --blue-a1:  #004df211;
+  --blue-a2:  #1166fb18;
+  --blue-a3:  #0077ff3a;
+  --blue-a4:  #0075ff57;
+  --blue-a5:  #0081fd6b;
+  --blue-a6:  #0f89fd7f;
+  --blue-a7:  #2a91fe98;
+  --blue-a8:  #3094feb9;
+  --blue-a9:  #0090ff;
+  --blue-a10: #3b9eff;
+  --blue-a11: #70b8ff;
+  --blue-a12: #c2e6ff;
+  --blue-surface: #0d284780;
+
+  /* ── Slate dark ──────────────────────────────────────────────── */
+  --slate-1:  #151718;
+  --slate-2:  #1a1d1e;
+  --slate-3:  #202425;
+  --slate-4:  #26292b;
+  --slate-5:  #2b2f31;
+  --slate-6:  #313538;
+  --slate-7:  #3a3f42;
+  --slate-8:  #4c5155;
+  --slate-9:  #697177;
+  --slate-10: #787f85;
+  --slate-11: #9ba1a6;
+  --slate-12: #ecedee;
+  --slate-a1:  #00000000;
+  --slate-a2:  #d8f4f609;
+  --slate-a3:  #ddeaf814;
+  --slate-a4:  #d3edf81d;
+  --slate-a5:  #d9edfe25;
+  --slate-a6:  #d6ebfd30;
+  --slate-a7:  #d9edff40;
+  --slate-a8:  #d9edff5d;
+  --slate-a9:  #dfebfd6d;
+  --slate-a10: #e5edfd7b;
+  --slate-a11: #f1f7feb5;
+  --slate-a12: #fcfdffef;
+  --slate-surface: #1f212380;
+}

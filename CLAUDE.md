@@ -32,7 +32,32 @@ npx vitest run <file>   # Run a single test file
 
 Custom hooks in `src/hooks/` derive from these stores and abstract media query detection (`useIsDesktop`, `useMediaQuery`, `useSwipeToClose`).
 
-**UI components:** `src/components/ui/` — built on **React Aria Components** and styled with **Tailwind Variants** (`tv()`). Use `cn()` from `src/lib/utils.ts` (clsx + tailwind-merge) for conditional class composition.
+**UI components:** `src/components/ui/` — built on **[JollyUI](https://jollyui.dev)**, a shadcn/ui-compatible component library that wraps **React Aria Components** with Tailwind styling. Use `cn()` from `src/lib/utils.ts` (clsx + tailwind-merge) for conditional class composition. Component variants use `tailwind-variants` (`tv()`).
+
+**IMPORTANT — Adding UI components:** Always install from the JollyUI registry. Never use the default shadcn registry (`ui.shadcn.com`), as those components are based on Radix UI and are incompatible with this project's React Aria Components setup.
+
+```bash
+# Install a JollyUI component
+npx shadcn@latest add https://jollyui.dev/default/<component-slug>
+
+# Examples
+npx shadcn@latest add https://jollyui.dev/default/menu
+npx shadcn@latest add https://jollyui.dev/default/popover
+npx shadcn@latest add https://jollyui.dev/default/select
+```
+
+Available JollyUI component slugs (categories):
+- **Buttons:** `button`, `file-trigger`, `toggle`, `toggle-group`
+- **Collections:** `grid-list`, `list-box`, `menu`, `table`, `tag-group`, `tree`
+- **Color:** `color-picker`, `color-primitives`
+- **Date/Time:** `calendar`, `date-field`, `date-picker`, `date-range-picker`, `range-calendar`, `time-field`
+- **Drag & Drop:** `dropzone`
+- **Forms:** `checkbox`, `checkbox-group`, `form`, `number-field`, `radio-group`, `search-field`, `slider`, `switch`, `text-field`
+- **Navigation:** `breadcrumbs`, `disclosure`, `disclosure-group`, `link`, `tabs`
+- **Overlays:** `dialog`, `modal`, `popover`, `tooltip`
+- **Pickers:** `combobox`, `select`
+- **Status:** `meter`, `progress-bar`
+- **Content:** `group`, `toolbar`
 
 **Styling:** Tailwind CSS with CSS-variable design tokens defined in `src/index.css`. Component variants use `tailwind-variants` for composable, type-safe styling.
 

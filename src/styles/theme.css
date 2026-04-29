@@ -1,0 +1,266 @@
+/* ================================================================
+   THEME — primitivos do tema padrão (brown + sand) + tokens semânticos
+   Cada tema é responsável pelos seus próprios primitivos de cor.
+   ================================================================ */
+
+/* ── Brown (marca do tema padrão) ─────────────────────────────── */
+:root {
+  --brown-1:  #fefdfc;
+  --brown-2:  #fcf9f6;
+  --brown-3:  #f6ede7;
+  --brown-4:  #f0e4d9;
+  --brown-5:  #ebdaca;
+  --brown-6:  #e4cdb7;
+  --brown-7:  #dcbc9f;
+  --brown-8:  #cdaa7a;
+  --brown-9:  #ad7f58;
+  --brown-10: #a07553;
+  --brown-11: #815e46;
+  --brown-12: #3e332e;
+  --brown-a1:  #aa550003;
+  --brown-a2:  #aa550009;
+  --brown-a3:  #a04b0018;
+  --brown-a4:  #9b4a0026;
+  --brown-a5:  #9f4d0035;
+  --brown-a6:  #a04e0048;
+  --brown-a7:  #a34e0060;
+  --brown-a8:  #9f4a0081;
+  --brown-a9:  #823c00a7;
+  --brown-a10: #723300ac;
+  --brown-a11: #522100b9;
+  --brown-a12: #140600d1;
+  --brown-surface: #fbf8f4cc;
+}
+.dark {
+  --brown-1:  #12110f;
+  --brown-2:  #1c1816;
+  --brown-3:  #28211d;
+  --brown-4:  #322922;
+  --brown-5:  #3e3128;
+  --brown-6:  #4d3c2f;
+  --brown-7:  #614a39;
+  --brown-8:  #7c5f46;
+  --brown-9:  #ad7f58;
+  --brown-10: #b88c67;
+  --brown-11: #dbb594;
+  --brown-12: #f2e1ca;
+  --brown-a1:  #91110002;
+  --brown-a2:  #fba67c0c;
+  --brown-a3:  #fcb58c19;
+  --brown-a4:  #fbbb8a24;
+  --brown-a5:  #fcb88931;
+  --brown-a6:  #fdba8741;
+  --brown-a7:  #ffbb8856;
+  --brown-a8:  #ffbe8773;
+  --brown-a9:  #feb87da8;
+  --brown-a10: #ffc18cb3;
+  --brown-a11: #fed1aad9;
+  --brown-a12: #feecd4f2;
+  --brown-surface: #271f1b80;
+}
+
+/* ── Sand (neutro quente do tema padrão) ─────────────��────────── */
+:root {
+  --sand-1:  #fdfdfc;
+  --sand-2:  #f9f9f8;
+  --sand-3:  #f1f0ef;
+  --sand-4:  #e9e8e6;
+  --sand-5:  #e2e1de;
+  --sand-6:  #dad9d6;
+  --sand-7:  #cfceca;
+  --sand-8:  #bcbbb5;
+  --sand-9:  #8d8d86;
+  --sand-10: #82827c;
+  --sand-11: #63635e;
+  --sand-12: #21201c;
+  --sand-a1:  #55550003;
+  --sand-a2:  #25250007;
+  --sand-a3:  #20100010;
+  --sand-a4:  #1f150019;
+  --sand-a5:  #1f180021;
+  --sand-a6:  #19130029;
+  --sand-a7:  #19140035;
+  --sand-a8:  #1915014a;
+  --sand-a9:  #0f0f0079;
+  --sand-a10: #0c0c0083;
+  --sand-a11: #080800a1;
+  --sand-a12: #060500e3;
+  --sand-surface: #ffffffcc;
+}
+.dark {
+  --sand-1:  #111110;
+  --sand-2:  #191918;
+  --sand-3:  #222221;
+  --sand-4:  #2a2a28;
+  --sand-5:  #31312e;
+  --sand-6:  #3b3a37;
+  --sand-7:  #494844;
+  --sand-8:  #62605b;
+  --sand-9:  #6f6d66;
+  --sand-10: #7c7a72;
+  --sand-11: #b5b3ad;
+  --sand-12: #eeeeec;
+  --sand-a1:  #00000000;
+  --sand-a2:  #f4f4f309;
+  --sand-a3:  #f6f6f513;
+  --sand-a4:  #fefef31b;
+  --sand-a5:  #fbfbeb23;
+  --sand-a6:  #fffaed2d;
+  --sand-a7:  #fffbed3c;
+  --sand-a8:  #fff9eb57;
+  --sand-a9:  #fffae965;
+  --sand-a10: #fffdee73;
+  --sand-a11: #fffcf4b0;
+  --sand-a12: #fffffded;
+  --sand-surface: #21212080;
+}
+
+/* ── Tokens semânticos ────────────────────────────────────────── */
+:root {
+  /* ── Fontes ──────────────────────────────────────────────────── */
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace;
+
+  /* ── Superfícies (backgrounds) ───────────────────────────────── */
+  /* Semântica Radix:
+     1-2 = fundos de app/área
+     3-5 = elementos interativos
+     6-8 = bordas
+     9-10 = sólidos (ações, badges)
+     11-12 = texto */
+  --bg-app:            var(--sand-1);        /* fundo da página */
+  --bg-subtle:         var(--sand-2);        /* áreas levemente tintadas */
+  --bg-ui:             var(--sand-3);        /* elementos de UI (inputs, etc.) */
+  --bg-ui-hover:       var(--sand-4);        /* hover em elementos de UI */
+  --bg-ui-active:      var(--sand-5);        /* pressed / selecionado */
+  --bg-surface:        #ffffff;              /* cards, diálogos, sheets */
+  --bg-surface-raised: #ffffff;              /* tooltips, dropdowns */
+  --bg-overlay:        rgb(0 0 0 / 0.5);     /* backdrop de modal */
+
+  /* ── Texto ───────────────────────────────────────────────────── */
+  --text-1:          var(--sand-12);  /* títulos, texto principal */
+  --text-2:          var(--sand-11);  /* texto secundário, labels */
+  --text-3:          var(--sand-9);   /* placeholder, dica */
+  --text-disabled:   var(--sand-8);   /* estado desabilitado */
+  --text-inverse:    #ffffff;         /* texto em fundos sólidos escuros */
+  --text-link:       var(--brown-11); /* links */
+  --text-link-hover: var(--brown-10);
+
+  /* ── Bordas ──────────────────────────────────────────────────── */
+  --border-subtle: var(--sand-5);  /* divisores muito sutis */
+  --border:        var(--sand-7);  /* bordas padrão, inputs */
+  --border-strong: var(--sand-9);  /* ênfase, estado selecionado */
+  --border-focus:  var(--brown-8); /* anel de foco */
+
+  /* ── Marca / Brand (brown) ───────────────────────────────────── */
+  --brand-subtle:       var(--brown-3);  /* background tintado */
+  --brand-subtle-hover: var(--brown-4);
+  --brand-ui:           var(--brown-5);
+  --brand-border:       var(--brown-7);
+  --brand-border-hover: var(--brown-8);
+  --brand-solid:        var(--brown-9);  /* ação primária */
+  --brand-solid-hover:  var(--brown-10);
+  --brand-text:         var(--brown-11); /* texto colorido na marca */
+  --brand-text-strong:  var(--brown-12);
+  --brand-foreground:   #ffffff;         /* texto em cima do sólido */
+
+  /* ── Status — Erro ───────────────────────────────────────────── */
+  --error-bg:            var(--red-2);
+  --error-bg-hover:      var(--red-3);
+  --error-border:        var(--red-7);
+  --error-border-strong: var(--red-8);
+  --error-solid:         var(--red-9);
+  --error-solid-hover:   var(--red-10);
+  --error-text:          var(--red-11);
+  --error-foreground:    #ffffff;
+
+  /* ── Status — Sucesso ────────────────────────────────────────── */
+  --success-bg:            var(--green-2);
+  --success-bg-hover:      var(--green-3);
+  --success-border:        var(--green-7);
+  --success-border-strong: var(--green-8);
+  --success-solid:         var(--green-9);
+  --success-solid-hover:   var(--green-10);
+  --success-text:          var(--green-11);
+  --success-foreground:    #ffffff;
+
+  /* ── Status — Aviso ──────────────────────────────────────────── */
+  --warning-bg:            var(--amber-2);
+  --warning-bg-hover:      var(--amber-3);
+  --warning-border:        var(--amber-7);
+  --warning-border-strong: var(--amber-8);
+  --warning-solid:         var(--amber-9);
+  --warning-solid-hover:   var(--amber-10);
+  --warning-text:          var(--amber-11);
+  --warning-foreground:    #21201c; /* texto escuro em fundo amarelo */
+
+  /* ── Status — Informação ─────────────────────────────────────── */
+  --info-bg:            var(--blue-2);
+  --info-bg-hover:      var(--blue-3);
+  --info-border:        var(--blue-7);
+  --info-border-strong: var(--blue-8);
+  --info-solid:         var(--blue-9);
+  --info-solid-hover:   var(--blue-10);
+  --info-text:          var(--blue-11);
+  --info-foreground:    #ffffff;
+
+  /* ── Brand alpha (para variantes soft/ghost) ────────────────── */
+  --brand-a3:  var(--brown-a3);   /* background soft tintado */
+  --brand-a4:  var(--brown-a4);   /* background soft hover */
+  --brand-a5:  var(--brown-a5);   /* background soft active */
+  --brand-a7:  var(--brown-a7);   /* borda soft */
+  --brand-a11: var(--brown-a11);  /* texto em fundo soft */
+
+  /* ── Surface tintada por cor de status ───────────────────────── */
+  --error-surface:   var(--red-surface);
+  --success-surface: var(--green-surface);
+  --warning-surface: var(--amber-surface);
+  --info-surface:    var(--blue-surface);
+
+  /* ── Raio base (usado pelos componentes) ─────────────────────── */
+  --radius: var(--radius-lg); /* 8px */
+
+  /* ── Aliases JollyUI / shadcn (zero breaking changes) ────────── */
+  --background:           var(--bg-app);
+  --foreground:           var(--text-1);
+  --card:                 var(--bg-surface);
+  --card-foreground:      var(--text-1);
+  --popover:              var(--bg-surface-raised);
+  --popover-foreground:   var(--text-1);
+  --primary:              var(--brand-solid);
+  --primary-foreground:   var(--brand-foreground);
+  --secondary:            var(--bg-ui);
+  --secondary-foreground: var(--text-1);
+  --muted:                var(--bg-subtle);
+  --muted-foreground:     var(--text-2);
+  --accent:               var(--brand-subtle);
+  --accent-foreground:    var(--brand-text);
+  --destructive:          var(--error-solid);
+  --destructive-foreground: var(--error-foreground);
+  --input:                var(--bg-ui);
+  --ring:                 var(--border-focus);
+}
+
+/* Dark mode — só o que tem valor literal hardcoded precisa de override;
+   tudo que referencia primitivos (var(--sand-*) etc.) atualiza
+   automaticamente pois os primitivos são redefinidos em .dark */
+.dark {
+  --bg-surface:        var(--sand-2);        /* cards ficam levemente elevados sobre o bg */
+  --bg-surface-raised: var(--sand-3);        /* dropdowns e tooltips sobre cards */
+  --bg-overlay:        rgb(0 0 0 / 0.7);
+  --text-inverse:      #ffffff;              /* texto em botões sólidos — continua branco */
+  --brand-foreground:  #ffffff;
+  --error-foreground:  #ffffff;
+  --success-foreground: #ffffff;
+  --info-foreground:   #ffffff;
+  --warning-foreground: #21201c;             /* texto escuro em âmbar continua legível no dark */
+
+  /* Bordas mais visíveis no dark (fundos escuros têm menos contraste natural) */
+  --border-subtle: var(--sand-5);  /* era sand-4, invisível no dark */
+  --border:        var(--sand-7);  /* era sand-6, contraste insuficiente */
+  --border-strong: var(--sand-9);  /* era sand-8, para ênfase real no dark */
+  --border-focus:  var(--brown-7); /* ring de foco mais visível no dark */
+
+  /* Input/switch track off-state precisa de step mais alto no dark */
+  --input:         var(--sand-6);  /* era sand-3 (bg-ui), track do switch "off" ficava invisível */
+}

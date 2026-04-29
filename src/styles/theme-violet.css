@@ -1,0 +1,136 @@
+/* ================================================================
+   TEMA VIOLETA — primitivos da marca + overrides semânticos
+   Aplique a classe .theme-violet no elemento <html>
+   Neutro frio (slate) vem de primitives.css — compartilhado.
+   ================================================================ */
+
+/* ── Violet — primitivos da marca deste tema ─────────────────── */
+:root {
+  --violet-1:  #fdfcfe;
+  --violet-2:  #faf8ff;
+  --violet-3:  #f4f0fe;
+  --violet-4:  #ebe4ff;
+  --violet-5:  #dfd6ff;
+  --violet-6:  #d0c5fd;
+  --violet-7:  #bfb0fc;
+  --violet-8:  #a898ef;
+  --violet-9:  #6e56cf;
+  --violet-10: #644fc1;
+  --violet-11: #5746af;
+  --violet-12: #20134b;
+  --violet-a1:  #5500aa03;
+  --violet-a2:  #4900ff07;
+  --violet-a3:  #4400ee0f;
+  --violet-a4:  #4300ff1b;
+  --violet-a5:  #3600ff26;
+  --violet-a6:  #3100fb35;
+  --violet-a7:  #2d01dd4a;
+  --violet-a8:  #2b00d066;
+  --violet-a9:  #2400b7a9;
+  --violet-a10: #2300abb2;
+  --violet-a11: #1f0099af;
+  --violet-a12: #0b0043d9;
+  --violet-surface: #faf8ffcc;
+}
+.dark {
+  --violet-1:  #14121f;
+  --violet-2:  #1b1528;
+  --violet-3:  #291f43;
+  --violet-4:  #33255b;
+  --violet-5:  #3c2e69;
+  --violet-6:  #473876;
+  --violet-7:  #56468b;
+  --violet-8:  #6958ad;
+  --violet-9:  #6e56cf;
+  --violet-10: #7d66f0;
+  --violet-11: #baa7ff;
+  --violet-12: #e2deff;
+  --violet-a1:  #4422ff0f;
+  --violet-a2:  #853ff916;
+  --violet-a3:  #8354fe36;
+  --violet-a4:  #7d51fd50;
+  --violet-a5:  #845ffd5f;
+  --violet-a6:  #8f6cfd6d;
+  --violet-a7:  #9879ff83;
+  --violet-a8:  #977dfea8;
+  --violet-a9:  #8668ffcc;
+  --violet-a10: #9176fed7;
+  --violet-a11: #baa7ff;
+  --violet-a12: #e3deffef;
+  --violet-surface: #1b152880;
+}
+
+/* ── Overrides semânticos do tema violeta ────────────────────── */
+.theme-violet {
+  /* ── Superfícies (Slate — cinza frio, contrasta com o violeta) ── */
+  --bg-app:            var(--slate-1);
+  --bg-subtle:         var(--slate-2);
+  --bg-ui:             var(--slate-3);
+  --bg-ui-hover:       var(--slate-4);
+  --bg-ui-active:      var(--slate-5);
+  --bg-surface:        #ffffff;
+  --bg-surface-raised: #ffffff;
+
+  /* ── Texto ───────────────────────────────────────────────────── */
+  --text-1:          var(--slate-12);
+  --text-2:          var(--slate-11);
+  --text-3:          var(--slate-9);
+  --text-disabled:   var(--slate-8);
+  --text-link:       var(--violet-11);
+  --text-link-hover: var(--violet-10);
+
+  /* ── Bordas ──────────────────────────────────────────────────── */
+  --border-subtle: var(--slate-5);
+  --border:        var(--slate-7);
+  --border-strong: var(--slate-9);
+  --border-focus:  var(--violet-8);
+
+  /* ── Marca / Brand (violet) ──────────────────────────────────── */
+  --brand-subtle:       var(--violet-3);
+  --brand-subtle-hover: var(--violet-4);
+  --brand-ui:           var(--violet-5);
+  --brand-border:       var(--violet-7);
+  --brand-border-hover: var(--violet-8);
+  --brand-solid:        var(--violet-9);   /* #6e56cf */
+  --brand-solid-hover:  var(--violet-10);
+  --brand-text:         var(--violet-11);
+  --brand-text-strong:  var(--violet-12);
+  --brand-foreground:   #ffffff;
+
+  /* ── Brand alpha (variantes soft/ghost) ─────────────────────── */
+  --brand-a3:  var(--violet-a3);
+  --brand-a4:  var(--violet-a4);
+  --brand-a5:  var(--violet-a5);
+  --brand-a7:  var(--violet-a7);
+  --brand-a11: var(--violet-a11);
+
+  /* ── Aliases JollyUI / shadcn ────────────────────────────────── */
+  --background:           var(--bg-app);
+  --foreground:           var(--text-1);
+  --card:                 var(--bg-surface);
+  --card-foreground:      var(--text-1);
+  --popover:              var(--bg-surface-raised);
+  --popover-foreground:   var(--text-1);
+  --primary:              var(--brand-solid);
+  --primary-foreground:   var(--brand-foreground);
+  --secondary:            var(--bg-ui);
+  --secondary-foreground: var(--text-1);
+  --muted:                var(--bg-subtle);
+  --muted-foreground:     var(--text-2);
+  --accent:               var(--brand-subtle);
+  --accent-foreground:    var(--brand-text);
+  --input:                var(--bg-ui);
+  --ring:                 var(--border-focus);
+}
+
+/* Dark mode do tema violeta — só os tokens com valor hardcoded mudam */
+.dark.theme-violet {
+  --bg-surface:        var(--slate-2);
+  --bg-surface-raised: var(--slate-3);
+
+  --border-subtle: var(--slate-5);
+  --border:        var(--slate-7);
+  --border-strong: var(--slate-9);
+  --border-focus:  var(--violet-7);
+  --input:         var(--slate-6);
+}
