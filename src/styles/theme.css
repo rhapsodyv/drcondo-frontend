@@ -204,6 +204,16 @@
   --info-text:          var(--blue-11);
   --info-foreground:    #ffffff;
 
+  /* ── Gray — alias do neutro do tema (adapta sombras e utilitários) */
+  --gray-1:  var(--sand-1);  --gray-2:  var(--sand-2);  --gray-3:  var(--sand-3);
+  --gray-4:  var(--sand-4);  --gray-5:  var(--sand-5);  --gray-6:  var(--sand-6);
+  --gray-7:  var(--sand-7);  --gray-8:  var(--sand-8);  --gray-9:  var(--sand-9);
+  --gray-10: var(--sand-10); --gray-11: var(--sand-11); --gray-12: var(--sand-12);
+  --gray-a1:  var(--sand-a1);  --gray-a2:  var(--sand-a2);  --gray-a3:  var(--sand-a3);
+  --gray-a4:  var(--sand-a4);  --gray-a5:  var(--sand-a5);  --gray-a6:  var(--sand-a6);
+  --gray-a7:  var(--sand-a7);  --gray-a8:  var(--sand-a8);  --gray-a9:  var(--sand-a9);
+  --gray-a10: var(--sand-a10); --gray-a11: var(--sand-a11); --gray-a12: var(--sand-a12);
+
   /* ── Brand alpha (para variantes soft/ghost) ────────────────── */
   --brand-a3:  var(--brown-a3);   /* background soft tintado */
   --brand-a4:  var(--brown-a4);   /* background soft hover */
@@ -263,4 +273,13 @@
 
   /* Input/switch track off-state precisa de step mais alto no dark */
   --input:         var(--sand-6);  /* era sand-3 (bg-ui), track do switch "off" ficava invisível */
+
+  /* Sombras dark — fórmula Radix com black-a para profundidade real */
+  --shadow-xs:    0 1px 2px 0 var(--black-a5);
+  --shadow-sm:    0 0 0 1px var(--gray-a6), 0 0 0 0.5px var(--black-a3), 0 1px 1px 0 var(--black-a6), 0 2px 1px -1px var(--black-a6), 0 1px 3px 0 var(--black-a5);
+  --shadow-md:    0 0 0 1px var(--gray-a6), 0 2px 3px -2px var(--black-a3), 0 3px 8px -2px var(--black-a6), 0 4px 12px -4px var(--black-a7);
+  --shadow-lg:    0 0 0 1px var(--gray-a6), 0 8px 40px var(--black-a3), 0 12px 32px -16px var(--black-a5);
+  --shadow-xl:    0 0 0 1px var(--gray-a6), 0 12px 60px var(--black-a5), 0 12px 32px -16px var(--black-a7);
+  --shadow-2xl:   0 0 0 1px var(--gray-a6), 0 12px 60px var(--black-a4), 0 16px 64px var(--black-a6), 0 16px 36px -20px var(--black-a11);
+  --shadow-inner: inset 0 -1px 1px 0 var(--gray-a3), inset 0 0 0 1px var(--gray-a3), inset 0 3px 4px 0 var(--black-a5);
 }

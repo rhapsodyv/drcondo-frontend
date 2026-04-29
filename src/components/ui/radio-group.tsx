@@ -46,11 +46,13 @@ const Radio = ({ className, children, ...props }: AriaRadioProps) => {
         <>
           <span
             className={cn(
-              "jolly-Radio flex aspect-square size-4 items-center justify-center rounded-full border border-primary text-primary ring-offset-background",
+              "jolly-Radio flex aspect-square size-4 items-center justify-center rounded-full border border-primary text-primary ring-offset-background transition-transform",
               /* Focus */
               "group-data-[focused]/radio:outline-none",
               /* Focus Visible */
               "group-data-[focus-visible]/radio:ring-2 group-data-[focus-visible]/radio:ring-ring group-data-[focus-visible]/radio:ring-offset-2",
+              /* Pressed */
+              "group-data-[pressed]/radio:scale-90",
               /* Disabled */
               "group-data-[disabled]/radio:cursor-not-allowed group-data-[disabled]/radio:opacity-50",
               /* Invalid */

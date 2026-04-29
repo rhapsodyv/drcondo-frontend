@@ -51,7 +51,9 @@ function DisclosureHeader({ children, className }: DisclosureHeaderProps) {
         slot="trigger"
         className={composeRenderProps(className, (className) => {
           return cn(
-            "group flex flex-1 items-center justify-between rounded-md py-4 font-medium ring-offset-background transition-all hover:underline",
+            "group flex flex-1 items-center justify-between rounded-md py-4 font-medium ring-offset-background transition-all",
+            "data-[hovered]:underline",
+            "data-[pressed]:opacity-75",
             "data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
             "data-[focus-visible]:outline-none data-[focus-visible]:ring-2 data-[focus-visible]:ring-ring data-[focus-visible]:ring-offset-2",
             "outline-none",

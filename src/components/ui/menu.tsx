@@ -64,8 +64,11 @@ const MenuItem = ({ children, className, ...props }: AriaMenuItemProps) => (
         "relative flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors",
         /* Disabled */
         "data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-        /* Focused */
-        "data-[focused]:bg-accent data-[focused]:text-accent-foreground ",
+        /* Focused / Hovered */
+        "data-[focused]:bg-accent data-[focused]:text-accent-foreground",
+        "data-[hovered]:bg-accent data-[hovered]:text-accent-foreground",
+        /* Pressed */
+        "data-[pressed]:bg-accent/80 data-[pressed]:text-accent-foreground",
         /* Selection Mode */
         "data-[selection-mode]:pl-8",
         className

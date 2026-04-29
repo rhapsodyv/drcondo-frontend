@@ -59,6 +59,10 @@ const SelectTrigger = ({ className, children, ...props }: AriaButtonProps) => (
         "flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background",
         /* Disabled */
         "data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50",
+        /* Hovered */
+        "data-[hovered]:bg-muted",
+        /* Pressed */
+        "data-[pressed]:bg-muted/80",
         /* Focused */
         "data-[focus-visible]:outline-none data-[focus-visible]:ring-2 data-[focus-visible]:ring-ring data-[focus-visible]:ring-offset-2",
         /* Resets */

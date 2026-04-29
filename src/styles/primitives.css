@@ -201,14 +201,16 @@
   --radius-3xl:  1.5rem;    /* 24px */
   --radius-full: 9999px;
 
-  /* ── Sombras ─────────────────────────────────────────────────── */
-  --shadow-xs:    0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-sm:    0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-md:    0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg:    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl:    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --shadow-2xl:   0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  /* ── Sombras — fórmula Radix, usam --gray-a* e --black-a* ──────
+     --gray-a* aponta para o neutro do tema ativo (sand/slate)
+     e se adapta automaticamente ao light/dark mode.             */
+  --shadow-xs:    0 1px 2px 0 var(--black-a3);
+  --shadow-sm:    0 0 0 1px var(--gray-a3), 0 0 0 0.5px var(--black-a1), 0 1px 1px 0 var(--gray-a2), 0 2px 1px -1px var(--black-a1), 0 1px 3px 0 var(--black-a1);
+  --shadow-md:    0 0 0 1px var(--gray-a3), 0 2px 3px -2px var(--gray-a3), 0 3px 12px -4px var(--black-a2), 0 4px 16px -8px var(--black-a2);
+  --shadow-lg:    0 0 0 1px var(--gray-a3), 0 8px 40px var(--black-a1), 0 12px 32px -16px var(--gray-a3);
+  --shadow-xl:    0 0 0 1px var(--gray-a3), 0 12px 60px var(--black-a3), 0 12px 32px -16px var(--gray-a5);
+  --shadow-2xl:   0 0 0 1px var(--gray-a3), 0 12px 60px var(--black-a3), 0 16px 64px var(--gray-a2), 0 16px 36px -20px var(--gray-a7);
+  --shadow-inner: inset 0 0 0 1px var(--gray-a5), inset 0 1.5px 2px 0 var(--gray-a2), inset 0 1.5px 2px 0 var(--black-a2);
 
   /* ── Tipografia — tamanhos ───────────────────────────────────── */
   --font-size-xs:   0.75rem;   /*  12px */

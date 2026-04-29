@@ -54,8 +54,12 @@ const Tab = ({ className, ...props }: AriaTabProps) => (
         "data-[focus-visible]:ring-2 data-[focus-visible]:ring-ring data-[focus-visible]:ring-offset-2",
         /* Disabled */
         "data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+        /* Hovered (unselected) */
+        "data-[hovered]:bg-background/50 data-[hovered]:text-foreground",
+        /* Pressed */
+        "data-[pressed]:opacity-70",
         /* Selected */
-        "data-[selected]:bg-background data-[selected]:text-foreground data-[selected]:shadow-sm ",
+        "data-[selected]:bg-background data-[selected]:text-foreground data-[selected]:shadow-sm",
         /* Orientation */
         "group-data-[orientation=vertical]:w-full",
         className

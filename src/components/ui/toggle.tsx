@@ -11,13 +11,17 @@ import { cn } from "@/lib/utils"
 
 const toggleVariants = cva(
   [
-    "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors",
+    "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition",
     /* Disabled */
     "data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
     /* Hover */
     "data-[hovered]:bg-muted data-[hovered]:text-muted-foreground",
+    /* Pressed */
+    "data-[pressed]:scale-[0.97] data-[pressed]:bg-muted/80",
     /* Selected */
     "data-[selected]:bg-accent data-[selected]:text-accent-foreground",
+    /* Selected + Hover */
+    "data-[selected]:data-[hovered]:bg-accent/80",
     /* Focus Visible */
     "data-[focus-visible]:outline-none data-[focus-visible]:ring-2 data-[focus-visible]:ring-ring data-[focus-visible]:ring-offset-2",
     /* Resets */
