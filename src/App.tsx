@@ -1,5 +1,5 @@
-import { AppLayout } from '@/components/layout/AppLayout';
+import { AdminLayout } from '@/components/layout/AdminLayout.tsx';
 
 export default function App() {
-  return <AppLayout />;
+  return <AdminLayout />;
 }

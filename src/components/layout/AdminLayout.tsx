@@ -11,7 +11,7 @@ const styles = {
   main: 'flex-1 overflow-auto p-4',
 };
 
-export function AppLayout() {
+export function AdminLayout() {
   return (
     <div className={styles.root}>
       <Navbar />

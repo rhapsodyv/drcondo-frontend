@@ -24,7 +24,7 @@ npx vitest run <file>   # Run a single test file
 
 **Routing:** `src/router/index.tsx` — React Router 7 with `<RouterProvider>`. Pages live in `src/pages/`.
 
-**Layout:** `src/components/layout/AppLayout.tsx` is the shell — it composes `Navbar`, `LeftSidebar`, `RightSidebar`, and `MobileBottomNav`. Desktop shows a collapsible left sidebar; mobile uses a bottom nav bar with swipe-to-close sheet panels.
+**Layout:** `src/components/layout/AdminLayout.tsx` is the shell — it composes `Navbar`, `LeftSidebar`, `RightSidebar`, and `MobileBottomNav`. Desktop shows a collapsible left sidebar; mobile uses a bottom nav bar with swipe-to-close sheet panels.
 
 **State:** Zustand stores in `src/store/`:
 - `useAppStore` — application-level state (e.g., counters)
